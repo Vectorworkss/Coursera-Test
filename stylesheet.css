@@ -15,7 +15,8 @@ h1 {
   font-size: 40px;
   text-align: center;
   color: maroon;
-  font-size: 1.75em
+  font-size: 1.75em;
+  padding: 40px;
 }
 
 
@@ -23,18 +24,34 @@ p {
   width: 150px;
   height: 40px;
   border: 1px solid black;
-  font-size: 1.25em
-  margin: 0px
+  font-size: 1.25em;
+  margin: 0px;
   padding: 0px;
 }
 
-div {
-  background-color: blue;
+.Row
+{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 10px;
 }
+.Column
+{
+    display: table-cell;
+    border: 1px solid black;
+    background-color: red;
+    padding: 20px;
+}
+
+
+div {
+  position: relative;
+ }
 
 section {
   clear: both;
-  padding-top:40px;
+  padding-top:60px;
   text-align: left;
 }
 
@@ -61,7 +78,7 @@ section {
 }
 
 #p3 {
-  background-color: maroon;
+  background-color: blue;
   text-align: center;
   padding-top: 10px;
   color: white;
@@ -71,58 +88,20 @@ section {
   right: 0;
 }
 
-#d1 {  
-  border: 1px solid black;
-  margin: 10px;
-  padding: 20px;
-  position: relative;
-  width: 350px;
-  height: 180px;}
-#d2 {
-  border: 1px solid black;
-  margin: 10px;
-  padding: 20px;
-  position: relative;
-  width: 350px;
-  height: 180px;
-}
-#d3 {
-  border: 1px solid black;
-  margin: 10px;
-  padding: 20px;
-  position: relative;
-  width: 350px;
-  height: 180px;
+/* For desktop: */
+@media (min-width: 1200px){
+
+.col-1 {width: 25%;}
+.col-2 {width: 25%;}
 }
 
-/********** Large devices only **********/
-@media (min-width: 1200px) {
-  #d1 {
-    width: 350px;
-    height: 180px;
-  }
-  #d2 {
-    width: 350px;
-    height: 180px;
-  }
-  #d3 {
-    width: 350px;
-    height: 180px;
+@media (min-width: 992px) and (max-width: 1199px){
+  .col-1 {width: 50%}
+  .col-2 {width: 100%}
+}
+
+@media only screen and (max-width: 768px) {
+   .col-6 {
+        width: 100%;
     }
-}
-
-/********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
-  #d1 {
-    width: 50%;
-    height: auto;
-  }
-  #d2 {
-    width: 50%
-    height: auto;
-  }
-  #d3 {
-    width: 100%
-    height: auto;
-  }
 }
